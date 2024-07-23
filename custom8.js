@@ -147,7 +147,7 @@ function applyCustomActions(data) {
     } else if (data.chatmessage.includes("comida1")) {
       const randomIndex = Math.floor(Math.random() * replyFood.length);
       answer = `${data.chatname}TuBot: ${replyFood[randomIndex]}`;
-    } else if (data.chatmessage.startsWith('!tula')) {
+    } else if (data.chatmessage.startsWith('!memide')) {
       const randomNumber = Math.floor(Math.random() * 26); // Número aleatorio entre 0 y 25
       const answer = `${data.chatname} Te mide ${randomNumber} cm.`;
       console.log(answer);
