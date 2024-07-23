@@ -1,6 +1,4 @@
-Claro, aquí está la traducción al español de los comentarios en el código:
 
-```javascript
 // mejor tipo de iteración de bucle llamado Fisher-Yates shuffle
 // vamos a crear un array y un bucle for - to.
 function applyCustomActions(data) {
@@ -158,4 +156,4 @@ function applyCustomActions(data) {
 
     return data; // devuelve los datos, si deseas modificarlos. Si devuelves "null", se detendrá el procesamiento. (también false funciona, pero creo que lo desaprobaré)
 }
-```
+
