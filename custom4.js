@@ -8,23 +8,7 @@ function applyCustomActions(data) {
   // crear una respuesta para emoticonos
   // añadir respuesta de emoticono
  
-    // expulsar del stream
-    'emojiAngel', 'emojiAngry', 'emojiAstonished', 'emojiAwake', 'emojiBlowKiss', 'emojiBubbly', 'emojiCheerful', 'emojiClown', 'emojiCool', 'emojiCrave', 'emojiCray', 'emojiCrying', 'emojiCurious', 'emojiCute', 'emojiDead', 'emojiDevil', 'emojiDisappoint', 'emojiDisguise', 'emojiDJ', 'emojiDown', 'emojiEnraged', 'emojiExited', 'emojiEyeRoll', 'emojiFire', 'emojiGamer', 'emojiGlass', 'emojiGoofy', 'emojiGramps', 'emojiGrimacing', 'emojiGreen', 'emojiGrumpy', 'emojiHappy', 'emojiHeartEyes', 'emojiHmm', 'emojiKing', 'emojiKiss', 'emojiLady', 'emojiLaughing', 'emojyLoading', 'emojiLol',
-    // expulsión personal del stream
-    'HinuBotappleheart', 'HinuBotcheer1', 'HinuBotcheer2', 'HinuBotdj1', 'HinuBotdj2', 'HinuBotdj3', 'HinuBotdjsmile', 'HinuBotsun', 'HinuBotcheeranimate', 'HinuBotlisteners1', 'HinuBotlistening2', 'HinuBotnicemusic', 'HinuBotpikadance', 'HinuBotwatching',
-    // twitch
-    "r)", ";p", ":p", ";)", ":\\", "<3", ":O", "B)", "O_o", ":|", ":D", ":(", ":)"
-  ];
-  var messageContainsEmoticon = false;
-  var matchedEmoticon;
-
-  for (var i = 0; i < emoticons.length; i++) {
-    if (data.chatmessage.indexOf(emoticons[i]) !== -1) {
-      messageContainsEmoticon = true;
-      matchedEmoticon = emoticons[i];
-      break;
-    }
-  }
+  
 
   // excluir al usuario toty gee de la respuesta
   // si esto no se hace, el bot responderá a sí mismo para siempre.
