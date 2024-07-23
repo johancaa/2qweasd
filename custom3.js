@@ -150,7 +150,7 @@ function applyCustomActions(data) {
       answer = `${data.chatname}TuBot: ${replyFood[randomIndex]}`;
     } else if (data.chatmessage.startsWith('!tula')) {
       const randomNumber = Math.floor(Math.random() * 26); // Número aleatorio entre 0 y 25
-      const answer = `${data.chatname}TuBot: Aquí tiene, el número aleatorio es ${randomNumber}.`;
+      const answer = `${data.chatname} te mide ${randomNumber} cm .`;
       console.log(answer);
       respondP2P(answer, tid);
     }
