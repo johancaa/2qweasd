@@ -1,4 +1,3 @@
-
 // mejor tipo de iteración de bucle llamado Fisher-Yates shuffle
 // vamos a crear un array y un bucle for - to.
 function applyCustomActions(data) {
@@ -7,12 +6,28 @@ function applyCustomActions(data) {
 
   // crear una respuesta para emoticonos
   // añadir respuesta de emoticono
- 
-  
+  var emoticons = ['😁', '😂', '😃', '😄', '😅', '😆', '😉', '😊', '😋', '😌', '😍', '😏', '😒', '😓', '😔', '😖', '😘', '😚', '😜', '😝', '😞', '😠', '😡', '😢', '😣', '😤', '😥', '😨', '😩', '😪', '😫', '😭', '😰', '😱', '😲', '😳', '😵', '😷', '😸', '😹', '😺', '😻', '😼', '😽', '😾', '😿', '🙀', '🙅', '🙆', '🙇', '🙈', '🙉', '🙊', '🙋', '🙌', '🙍', '🙎', '🙏', '😀', '😇', '😈', '😎', '😐', '😑', '😕', '😗', '😙', '😛', '😟', '😦', '😧', '😬', '😮', '😯', '😴', '😶', '💚', '💛', '💝', '💞', '💟', '💔', '💕', '💖', '💗',
+    // expulsar del stream
+    'emojiAngel', 'emojiAngry', 'emojiAstonished', 'emojiAwake', 'emojiBlowKiss', 'emojiBubbly', 'emojiCheerful', 'emojiClown', 'emojiCool', 'emojiCrave', 'emojiCray', 'emojiCrying', 'emojiCurious', 'emojiCute', 'emojiDead', 'emojiDevil', 'emojiDisappoint', 'emojiDisguise', 'emojiDJ', 'emojiDown', 'emojiEnraged', 'emojiExited', 'emojiEyeRoll', 'emojiFire', 'emojiGamer', 'emojiGlass', 'emojiGoofy', 'emojiGramps', 'emojiGrimacing', 'emojiGreen', 'emojiGrumpy', 'emojiHappy', 'emojiHeartEyes', 'emojiHmm', 'emojiKing', 'emojiKiss', 'emojiLady', 'emojiLaughing', 'emojyLoading', 'emojiLol',
+    // expulsión personal del stream
+    'HinuBotappleheart', 'HinuBotcheer1', 'HinuBotcheer2', 'HinuBotdj1', 'HinuBotdj2', 'HinuBotdj3', 'HinuBotdjsmile', 'HinuBotsun', 'HinuBotcheeranimate', 'HinuBotlisteners1', 'HinuBotlistening2', 'HinuBotnicemusic', 'HinuBotpikadance', 'HinuBotwatching',
+    // twitch
+    "r)", ";p", ":p", ";)", ":\\", "<3", ":O", "B)", "O_o", ":|", ":D", ":(", ":)"
+  ];
+  var messageContainsEmoticon = false;
+  var matchedEmoticon;
+
+  for (var i = 0; i < emoticons.length; i++) {
+    if (data.chatmessage.indexOf(emoticons[i]) !== -1) {
+      messageContainsEmoticon = true;
+      matchedEmoticon = emoticons[i];
+      break;
+    }
+  }
 
   // excluir al usuario toty gee de la respuesta
   // si esto no se hace, el bot responderá a sí mismo para siempre.
-  if (messageContainsEmoticon && (data.chatname !== 'HinuBot' && data.chatname.toLowerCase() !== 'HinuBot')) {
+  if (messageContainsEmoticon && (data.chatname !== 'Hinu' && data.chatname.toLowerCase() !== 'HinuBot')) {
     let answer;
     answer = `${data.chatname}TuBot: Hola, gracias por el emoticono ${matchedEmoticon}`;
     console.log(answer);
@@ -134,7 +149,7 @@ function applyCustomActions(data) {
       answer = `${data.chatname}TuBot: ${replyFood[randomIndex]}`;
     } else if (data.chatmessage.startsWith('!tula')) {
       const randomNumber = Math.floor(Math.random() * 26); // Número aleatorio entre 0 y 25
-      const answer = `${data.chatname} te mide ${randomNumber} cm .`;
+      const answer = `${data.chatname}TuBot: Aquí tiene, el número aleatorio es ${randomNumber}.`;
       console.log(answer);
       respondP2P(answer, tid);
     }
@@ -145,4 +160,3 @@ function applyCustomActions(data) {
 
   return data; // devuelve los datos, si deseas modificarlos. Si devuelves "null", se detendrá el procesamiento. (también false funciona, pero creo que lo desaprobaré)
 }
-
