@@ -29,7 +29,7 @@ function applyCustomActions(data) {
   // si esto no se hace, el bot responderá a sí mismo para siempre.
   if (messageContainsEmoticon && (data.chatname !== 'Hinu' && data.chatname.toLowerCase() !== 'HinuBot')) {
     let answer;
-    answer = `${data.chatname}TuBot: Hola, gracias por el emoticono ${matchedEmoticon}`;
+    answer = `${data.chatname}:${matchedEmoticon}`;
     console.log(answer);
     respondP2P(answer, tid);
   }
